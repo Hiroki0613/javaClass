@@ -1,6 +1,4 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.util.Scanner;
 
 /*課題リンク
 https://github.com/dragonfly91/java-class/blob/main/questions.md
@@ -32,38 +30,17 @@ public class App {
 
     private static void q3() {
 
-        InputStreamReader isrA = new InputStreamReader(System.in);
-        BufferedReader brA = new BufferedReader(isrA);
+        System.out.println("Input first number:");
+        Scanner scan = new Scanner(System.in);
 
-        InputStreamReader isrB = new InputStreamReader(System.in);
-        BufferedReader brB = new BufferedReader(isrB);
+        int a = scan.nextInt();
 
-        String aString = "";
-        String bString = "";
+        System.out.println("Input second number:");
+        int b = scan.nextInt();
 
-        System.out.println("Input first number");
+        int c = a * b;
 
-        try {
-            aString = brA.readLine();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        System.out.println("Input second number");
-
-        try {
-            bString = brB.readLine();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        int intA = Integer.parseInt(aString);
-        int intB = Integer.parseInt(bString);
-        int intC = intA * intB;
-
-        String cString = Integer.toString(intC);
-
-        System.out.println(aString + " × " + bString + " = " + cString);
-
+        String multipleSting = a + " ×  " + b + " = " + c;
+        System.out.println(multipleSting);
     }
 }
