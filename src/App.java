@@ -30,12 +30,12 @@ public class App {
 
     private static void q3() {
 
-        System.out.println("Input first number:");
+        System.out.print("Input first number:");
         Scanner scan = new Scanner(System.in);
 
         int a = scan.nextInt();
 
-        System.out.println("Input second number:");
+        System.out.print("Input second number:");
         int b = scan.nextInt();
 
         int c = a * b;
